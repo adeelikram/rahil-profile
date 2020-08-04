@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="push" mode="ios">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-avatar>
+            <ion-img src="assets/profile/myimg.jpg"></ion-img>
+          </ion-avatar>
+          <ion-list-header>Follow me on:</ion-list-header>
+          <ion-item-group>
+            <ion-item color="light" lines='full' *ngFor="let l of links" mode="md" class="link" [href]="l.url"
+              rel="noopener">
+              <ion-icon [name]="l.icon" slot="start"></ion-icon>
+              {{l.title}}
+            </ion-item>
+          </ion-item-group>
+          <h1 class="ion-font-bolder"><b>Menu</b></h1>
+          <ion-menu-toggle autoHide="false">
+            <div id="marginize"></div>
+            <ion-item-group>
+              <ion-item color="light" mode="md" detail class="link" button lines="full" *ngFor="let i of items"
+                (click)="clicked(i.link)" size="large">
+                <ion-icon size="large" [hidden]="!i.name" [name]="i.name" slot="start"></ion-icon>
+                <ion-icon size="large" [hidden]="!i.src" [src]="i.src" slot="start"></ion-icon>
+                <span class="text"> {{i.title}}</span>
+              </ion-item>
+            </ion-item-group>
+          </ion-menu-toggle>
+        </ion-list>
+
+
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

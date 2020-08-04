@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title class="title">Project</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-item *ngFor="let i of items" [href]="i.url" rel="noopener" >
+      <ion-avatar slot="start" class="avatar1">
+        <ion-img [src]="i.logo" ></ion-img>
+      </ion-avatar>
+      <img size="large" [src]="i.img" [class]="i.class+' inner-img'">
+      <ion-icon size="large" slot="end" [src]="i.icon" [hidden]="!i.icon"></ion-icon>
+      <ion-icon size="large" slot="end" [name]="i.name" [hidden]="!i.name"></ion-icon>
+    </ion-item>
+  </div>
+</ion-content>

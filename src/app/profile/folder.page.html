@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title class="title">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <ion-avatar>
+    <ion-img src="assets/personal/my.jpg"></ion-img>
+  </ion-avatar>
+
+  <ion-card color="tertiary">
+
+    <ion-card-content mode="ios">
+      <ion-grid style="margin:0px !important">
+        <ion-row *ngFor="let i of items" class="ion-text-wrap" style="margin:0px !important">
+          <ion-col class="ion-align-self-center ion-hide-sm-down">
+            <div>
+              <h1>{{i.domain}}</h1>
+            </div>
+          </ion-col>
+          <ion-col class="ion-align-self-center ion-text-wrap">
+            <div class=" ion-hide-sm-up">
+              <h1>{{i.domain}}</h1>
+            </div>
+            <div class=" ion-text-center">
+              <h1 class="result">{{i.range}}</h1>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

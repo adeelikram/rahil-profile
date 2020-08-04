@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title class="title">Skills</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header color="primary">
+      <ion-title class="header"> Web & Android & IOS & Desktop</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-margin-top">
+        <ion-item *ngFor="let i of items_set_1" lines="inset">
+          <ion-icon [src]="i.src" [hidden]="!i.src"></ion-icon>
+          <ion-icon [name]="i.icon" [hidden]="!i.icon"></ion-icon>
+          <ion-label > {{i.title}}</ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header color="primary">
+      <ion-title class="header"> DataBases </ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-margin-top">
+        <ion-item *ngFor="let i of items_set_2" lines="inset" >
+          <ion-avatar>
+            <ion-img [src]="i.src"></ion-img>
+          </ion-avatar>
+         <ion-label > {{i.title}}</ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header color="primary">
+      <ion-title class="header"> Programming Languages </ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-margin-top">
+        <ion-item *ngFor="let i of items_set_3" lines="inset" >
+          <ion-avatar>
+            <ion-img [src]="i.src"></ion-img>
+          </ion-avatar>
+          <ion-label> {{i.title}}</ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
